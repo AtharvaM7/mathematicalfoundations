@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/mathematicalfoundations/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/mathematicalfoundations/" rel="alternate" type="text/html" /><updated>2023-08-06T05:59:21+00:00</updated><id>http://localhost:4000/mathematicalfoundations/feed.xml</id><title type="html">CS526 Mathematical Foundations</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Introduction</title><link href="http://localhost:4000/mathematicalfoundations/L1" rel="alternate" type="text/html" title="Introduction" /><published>2023-03-20T00:00:00+00:00</published><updated>2023-03-20T00:00:00+00:00</updated><id>http://localhost:4000/mathematicalfoundations/Introduction</id><content type="html" xml:base="http://localhost:4000/mathematicalfoundations/L1"><![CDATA[<p>You can expect your notes by the first week of August.</p>
+
+<!--
+|Lecture 1| Introduction Class + Graph Theory| [Link to the Classroom Lecture](https://www.youtube.com/watch?v=ukOOZfCJo3U)|
+
+# Graphs 
+We introduced the idea of Graphs. 
+<div class="embed-container">
+  <iframe
+    src="https://www.youtube.com/embed/-peAUmrm4RM"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+.
+
+# Handshaking Lemma
+We spoke about handshakes in the classroom and how we can model it using Graphs. 
+<div class="embed-container">
+  <iframe
+    src="https://www.youtube.com/embed/szOGC5OxJBY"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+ By degree, we mean the number of lines that are adjacent on a point, or simply speaking, the number of friends that a person keeps
+
+# Isomorphic Graphs 
+We saw how two graphs that are appearingly different can actually be the same.
+
+1. **Quiz**: Are the following two graphs the same?<br>
+![C5](/discretemath/assets/images/c5.png){: width="200" height="200"}
+![Star](/discretemath/assets/images/star.png){: width="200" height="200"}
+
+1. **Test**: Are the following two graphs the same?<br>
+![C5](/discretemath/assets/images/10node_labelled.png){: width="200" height="200"}
+![Star](/discretemath/assets/images/10node_unlabelled.png){: width="200" height="200"}
+
+1. **Quiz**: Understand how the graphs as illustrated in the lecture ([link](https://youtu.be/ukOOZfCJo3U?t=2607)), are not isomorphic. Why? Google for Petersen Graph for some fun reading. 
+
+1. **Test**: If you are given two graphs on 100 nodes, how can one write a piece of code to find out if these two graphs are the same or not? What is the complexity involved in finding this out?
+
+-->]]></content><author><name></name></author><category term="Lectures" /><summary type="html"><![CDATA[You can expect your notes by the first week of August.]]></summary></entry></feed>
