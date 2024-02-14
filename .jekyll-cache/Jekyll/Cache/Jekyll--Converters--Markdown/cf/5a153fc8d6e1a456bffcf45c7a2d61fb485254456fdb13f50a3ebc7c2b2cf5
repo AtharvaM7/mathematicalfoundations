@@ -1,0 +1,88 @@
+I"H<h1 id="lower-bound-for-sorting"><strong>Lower Bound for Sorting</strong></h1>
+<h1 id="sorting-techniques-analysis"><strong>Sorting Techniques Analysis</strong></h1>
+
+<p>Out of all the sorting techniques that we know of:</p>
+
+<ul>
+  <li><strong>Bubble Sort</strong> takes \(O(n^2)\)</li>
+  <li><strong>Merge Sort</strong> takes \(O(n \log n)\)</li>
+</ul>
+
+<p>Other sorting algorithms do exist, but the minimum complexity for a sorting algorithm that we know of is $O(n \log n)$.</p>
+
+<h1 id="quest-for-a-better-sorting-algorithm"><strong>Quest for a Better Sorting Algorithm</strong></h1>
+
+<p>Our quest for a better sorting algorithm begins here. But does a better sorting algorithm even exist?</p>
+
+<h1 id="prerequisites"><strong>PREREQUISITES:</strong></h1>
+
+<h2 id="1-stirlings-approximation"><strong>1. Stirling’s Approximation:</strong></h2>
+
+<p>We are familiar with the factorial $n!$:</p>
+
+\[n! = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 1\]
+
+<p>Now, approximate every number less than $n$ to be $n$:</p>
+
+<p>Therefore, \(n! \approx n \cdot n \cdot \ldots \cdot n\).</p>
+
+<p>Hence, \(n! \approx n^n\).</p>
+
+<h2 id="logarithm-of-factorial-logn"><strong>Logarithm of Factorial \(\log(n!)\):</strong></h2>
+
+\[\log(n!) = \log(n) + \log(n-1) + \log(n-2) + \ldots + \log(1)\]
+
+\[\log(n!) = \sum_{k=1}^{n} \log{k} \approx \int_{1}^{n} \log{x} \,dx\]
+
+<p>Solving the integral:</p>
+
+\[\int_{1}^{n} \log(x) \,dx = n\log(n) - n + 1\]
+
+<p>Hence, \(\log(n!) \approx O(n \log n)\).</p>
+
+<h2 id="height-of-binary-tree-with-n-nodes-is-log-n"><strong>Height of Binary Tree with \(n\) Nodes is \(\log n\):</strong></h2>
+
+<p>What do we basically do in the sorting process?</p>
+
+<ol>
+  <li>Take any two elements, say \(a\) and \(b\), and then compare them; either \(a &lt; b\) or \(b &lt; a\).</li>
+  <li>Now, accordingly, we compare continuously and continuously and swap if required. (This is a constant operation). For example, consider the initial configuration.</li>
+  <li>We proceed with the compare and swap.
+<a href="https://drive.google.com/uc?export=view&amp;id=1DUBObkkSi5-MOKoSHPAB5udotYHPtkay">Alt Text</a>
+    <h1 id="sorting-and-configuration-graphs">Sorting and Configuration Graphs</h1>
+  </li>
+</ol>
+
+<p>We know that for a list of n numbers, we have n! possible configurations.</p>
+
+<p>Now, let’s add a touch of graphs to it. You have a configuration graph where each node is a configuration.</p>
+
+<p><strong>Question:</strong> How is one configuration linked to another configuration?</p>
+
+<p><strong>Answer:</strong> An edge appears between any two configurations post comparison and swap if required. Starting with any configuration, we travel across the path, making comparisons and swaps. Towards the end of the entire path, we get our sorted configuration.</p>
+
+<p>If there exists no other better algorithm to sort, the path through the nodes of the configuration must be of length O(n log n).</p>
+
+<p>Now, let us try proving the above statement.</p>
+
+<p><strong>Graph for the n! Configurations:</strong>
+<img src="https://drive.google.com/uc?export=view&amp;id=1TPT2QeFhDnt2Xhfr8" alt="Alt Text" />
+For the two entities you chose initially, denoted as ‘a’ and ‘b’, there are only two possible relationships: either \(a &lt; b\) or \(b &lt; a\). [Assuming \(a \neq b\) for the time being]</p>
+
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1ce7-6Jadz2t9z7NYSM94O384ypdWGf91" alt="Alt Text" /></p>
+
+<h1 id="binary-tree-analysis">Binary Tree Analysis</h1>
+
+<p>Don’t you think this is a binary tree?</p>
+
+<p>By the time you reach the sorted configuration, what would be the length of the path traveled? It would be the length of the binary tree.</p>
+
+<p>What is the height of the binary tree? The total configurations are \(n!\). Height would then be \(\log n!\) (Hint: we derived something useful initially).</p>
+
+<p>Correct! The height of the binary tree = length of the path traveled = \(\log(n!) \approx n \log n\).</p>
+
+<p>Now, you know that for any sorting algorithm, it would only traverse down the binary tree of all possible \(n!\) configurations. Therefore, the path would be \(n \log n\).</p>
+
+<p>Hence, proved.</p>
+
+:ET

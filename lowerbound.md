@@ -24,7 +24,7 @@ Our quest for a better sorting algorithm begins here. But does a better sorting 
 
 ## **1. Stirling’s Approximation:**
 
-We are familiar with the factorial $n!$:
+We are familiar with the factorial $$n!$$:
 
 $$ n! = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 1 $$
 
